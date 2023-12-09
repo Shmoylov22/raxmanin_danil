@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+	fmt.Println("Hello World")
+
 	file, err := os.Create("file.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -13,7 +15,7 @@ func main() {
 	}
 	defer file.Close()
 
-	str := "Hello World"
+	str := "Hello World."
 
 	_, err = file.WriteString(str)
 	if err != nil {
